@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Livvic&family=Montserrat&family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lato&family=Livvic&family=Poppins&family=Roboto&family=Rubik+Marker+Hatch&display=swap');
 html {
     overflow-x: hidden;
 }
@@ -9,21 +9,21 @@ body {
 }
 
 h2 {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
 }
 
 h4,
 li,
 a,
 button {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 h6,
 p,
 input,
 label {
-    font-family: "Jost";
+    font-family: "Jost", sans-serif;
 }
 
 @keyframes float {
