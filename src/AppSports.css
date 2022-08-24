@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Livvic&family=Montserrat&family=Poppins&family=Roboto&display=swap');
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #ffe4e1;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: "Roboto";
+}
+
+h4,
+li,
+a,
+button {
+    font-family: "Poppins";
+}
+
+h6,
+p,
+input,
+label {
+    font-family: "Jost";
+}
+
+@keyframes float {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        top: 200px;
+        left: 200px;
+    }
+    50% {
+        top: 0px;
+        left: 400px;
+        color: rgb(128, 128, 128);
+    }
+    75% {
+        top: 200px;
+        left: 600px;
+    }
+    100% {
+        top: 200px;
+        left: 0;
+    }
+}
+
+.dot {
+    z-index: -1;
+    animation: float 6s 1s infinite normal forwards;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.tophead {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+@media (max-width: 64em) {
+    .tophead {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .tophead {
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .tophead {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .tophead {
+        font-size: 1.25rem;
+    }
+}
+
+.button-trans {
+    background: none;
+    color: #000;
+    border-radius: 1rem;
+}
