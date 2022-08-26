@@ -21,10 +21,10 @@ const Approuter = () => {
       <ThemeProvider theme={neutral} >
         <AuthProvider>
           <Routes location={location} key={location.pathname}>
-            <Route exact path='/' element={<ProtectedUser>
+            <Route exact path='/user' element={<ProtectedUser>
               <AppDashboard />
             </ProtectedUser>} />
-            <Route exact path='/s' element={<AppSports/>} />
+            <Route exact path='/' element={<AppSports/>} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/signin' element={<SignIn />} />
           </Routes>
