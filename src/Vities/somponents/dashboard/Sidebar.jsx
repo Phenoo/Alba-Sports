@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useAuth} from '../../../context/AuthContext'
-
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { MdDashboard} from '@react-icons/all-files/md/MdDashboard'
 import {RiDashboard2Fill} from '@react-icons/all-files/ri/RiDashboard2Fill'
@@ -175,12 +175,15 @@ const Sidebar = () => {
   const [click, setClick] = useState(false);
   const [current, setCurrentLink] = useState(1);
 
+  const navigate = useNavigate();
+
 
   const {logOut} = useAuth();
 
   const handleSignOut = async () => {
     try {
       await logOut();
+      navigate("/");
     } catch (err) {
       console.log(err.message)
     }

@@ -5,7 +5,7 @@ import { useAuth } from './context/AuthContext'
 const ProtectedUser = ({children}) => {
   let {currentUser} =  useAuth();
   if(!currentUser){
-    return<Navigate to="/user" />
+    return<Navigate to="/" />
   }
   return children
 }
