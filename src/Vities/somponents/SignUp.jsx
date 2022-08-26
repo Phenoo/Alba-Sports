@@ -203,7 +203,6 @@ const SignUp = () => {
     setError("");
     try {
       await signup(email, password );
-      console.log("signup successfully")
       navigate("/user");
     } catch (err) {
       setError(err.message)
@@ -233,7 +232,9 @@ const SignUp = () => {
               <label htmlFor="">password</label>
               <input type="password"  id="password"  placeholder='Enter your password' 
               onChange={(e) => setPassword(e.target.value)}
-              required />
+              required
+              autoComplete='current-password'
+              />
             </div>
             <div className="btn-container">
               <button id='signin' type="submit">Sign up</button>

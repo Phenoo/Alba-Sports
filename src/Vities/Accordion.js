@@ -71,9 +71,13 @@ const Accordion = ({title, info}) => {
 
   const [show, setShow] = useState(false);
 
+  const handleClick = () => {
+    setShow(!show);
+  }
+
 
   return (
-    <Question onClick={() => setShow(!show)}>
+    <Question onClick={handleClick}>
       <Ask>
 
       <ButtonContain>

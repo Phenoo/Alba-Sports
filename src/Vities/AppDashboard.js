@@ -9,7 +9,6 @@ import { useAuth } from '../context/AuthContext'
 const AppDashboard = () => {
   const [click, setClick] = useState(false);
   const {currentUser} = useAuth();
-  console.log(currentUser)
   return (
     <div>
       <Dashboard click={click} setClick={setClick} user={currentUser}/>

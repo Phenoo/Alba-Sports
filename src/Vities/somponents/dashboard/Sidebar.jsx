@@ -15,7 +15,7 @@ const Section = styled.section`
 position: fixed;
 top: 0;
 left: 0;
-background: #2121;
+background: rgba(0, 0, 0, 0.3);
 height: 92vh;
 width: 7vw;
 display: flex;
@@ -98,7 +98,7 @@ transition: width 0.3s ease-in-out;
     }
 
     &:hover{
-    background-color: #ffc107;
+    background-color: #ffe4e1;;
     
     a{
     color: #000;
@@ -114,7 +114,7 @@ transition: width 0.3s ease-in-out;
     }
     }
     .active{
-    background-color: #ffc107;
+    background-color: #ffe4e1;;
     color: #000;
     }
   }
@@ -127,7 +127,7 @@ transition: width 0.3s ease-in-out;
     display: none;
   }
   &:hover{
-    background-color: #da0037;
+    background-color: #ffe4e1;
   }
   a{
     display: flex;
@@ -152,18 +152,23 @@ transition: width 0.3s ease-in-out;
     position: absolute;
     top: 3rem;
     left: 20px;
-    width: 50px;
+    width: 40px;
     height: 2px;
-    background: #000;
+    background: ${props => props.click  ? '#ffe4e1' : '#111'};
+    transform: rotate(${props => props.click ? '50deg' : ''});
+    transition: all 0.3s ease;
     
     &::before{
       content: '';
-      width:${props => props.click ? '1rem' : '1.5rem'};
+      width 40px;
       height: 2px;
-      top: 10px;
-      background: #000;
+      top: ${props => props.click ? '0' : '10px'};
+      left: 0;
+      background: ${props => props.click  ? '#ffe4e1' : '#111'};
       position: absolute;
       cursor: pointer;
+      transform: rotate(${props => props.click ? '80deg' : ''});
+      transition: all 0.3s ease;
     }
   }
 }
@@ -197,7 +202,7 @@ const Sidebar = () => {
         </button>
       <div className="top">
 
-      <div className="links">
+      <div className="links" onClick={() => setClick(!click)}>
           <ul>
             <li onClick={() => setCurrentLink(1)} className={current === 1 ? 'active' : ''}>
               <a href="#a">

@@ -136,9 +136,10 @@ gap: 2rem;
 
   svg{
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     transition: all 0.4s ease-in-out;
+    color: ${props => props.theme.body};
 
     &:hover{
       transform: scale(1.3);
